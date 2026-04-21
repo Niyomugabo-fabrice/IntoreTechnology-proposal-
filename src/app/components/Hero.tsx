@@ -75,7 +75,7 @@ export function Hero() {
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/60"></div>
               </div>
             </div>
           ))}
@@ -84,12 +84,9 @@ export function Hero() {
 
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-white px-4">
         <div className="text-center">
-          <h3 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4">
-            ELEVATE
-          </h3>
-          <h4 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold min-h-[1.5em] flex items-center justify-center">
-            <TypewriterText text={dynamicTexts[currentTextIndex]} />
-          </h4>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 whitespace-nowrap">
+            <span style={{ color: '#B08D57' }}>ELEVATE</span> <span className="inline-block min-w-[200px]"><TypewriterText text={dynamicTexts[currentTextIndex]} /></span>
+          </h3>   
         </div>
       </div>
     </section>

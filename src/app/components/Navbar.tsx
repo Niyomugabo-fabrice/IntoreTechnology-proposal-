@@ -25,19 +25,19 @@ export function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <button onClick={() => scrollToSection('home')} className="text-[#B08D57] hover:text-white transition-colors">
-                Home
+                HOME
               </button>
               <button onClick={() => scrollToSection('services')} className="text-[#B08D57] hover:text-white transition-colors">
-                Services
+                SERVICES
               </button>
               <button onClick={() => scrollToSection('products')} className="text-[#B08D57] hover:text-white transition-colors">
-                Products
+                PRODUCTS
               </button>
               <button onClick={() => scrollToSection('about')} className="text-[#B08D57] hover:text-white transition-colors">
-                About
+                ABOUT
               </button>
               <button onClick={() => scrollToSection('contact')} className="text-[#B08D57] hover:text-white transition-colors">
-                Contact
+                CONTACT
               </button>
             </div>
           </div>

@@ -110,7 +110,7 @@ export function Hero() {
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
 
         {/* TITLE */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-widest uppercase flex items-center justify-center">
+        <h1 className="text-2xl sm:text-1.5xl md:text-2.5xl lg:text-3.5xl font-extrabold tracking-widest uppercase flex">
 
           <span className="text-white shrink-0">
             ELEVATE&nbsp;
@@ -126,46 +126,45 @@ export function Hero() {
         </h1>
 
         {/* ⭐ SERVICES CARDS */}
-        <div className="mt-10 w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 bg-white/5 backdrop-blur-md border border-white/20">
+<div className="mt-10 w-full max-w-6xl flex flex-col md:flex-row bg-white/5 backdrop-blur-md border border-white/20">
 
-          {/* Card 1 */}
-          <div className="p-6 text-white flex flex-col items-center justify-center text-center">
-            <h2 className="text-lg md:text-xl font-bold mb-2">
-              Website Development
-            </h2>
-            <p className="text-sm text-gray-300">
-              Modern, responsive and scalable web solutions.
-            </p>
-          </div>
+  {/* Card 1 */}
+  <div className="flex-1 p-6 text-white flex flex-col items-center justify-center text-center">
+    <h2 className="text-lg md:text-xl font-bold mb-2">
+      Website Development
+    </h2>
+    <p className="text-sm text-gray-300">
+      Modern, responsive and scalable web solutions.
+    </p>
+  </div>
 
-          {/* Divider */}
-          <div className="hidden md:block w-px bg-white/30"></div>
+  {/* Divider */}
+  <div className="hidden md:block w-px bg-white/30"></div>
 
-          {/* Card 2 */}
-          <div className="p-6 text-white flex flex-col items-center justify-center text-center">
-            <h2 className="text-lg md:text-xl font-bold mb-2">
-              Mobile Application Development
-            </h2>
-            <p className="text-sm text-gray-300">
-              Android & iOS apps with smooth user experience.
-            </p>
-          </div>
+  {/* Card 2 */}
+  <div className="flex-1 p-6 text-white flex flex-col items-center justify-center text-center">
+    <h2 className="text-lg md:text-xl font-bold mb-2">
+      Mobile Application Development
+    </h2>
+    <p className="text-sm text-gray-300">
+      Android & iOS apps with smooth user experience.
+    </p>
+  </div>
 
-          {/* Divider */}
-          <div className="hidden md:block w-px bg-white/30"></div>
+  {/* Divider */}
+  <div className="hidden md:block w-px bg-white/30"></div>
 
-          {/* Card 3 */}
-          <div className="p-6 text-white flex flex-col items-center justify-center text-center">
-            <h2 className="text-lg md:text-xl font-bold mb-2">
-              Second-hand Electronics Trading
-            </h2>
-            <p className="text-sm text-gray-300">
-              Buy and sell quality used electronic devices safely.
-            </p>
-          </div>
+  {/* Card 3 */}
+  <div className="flex-1 p-6 text-white flex flex-col items-center justify-center text-center">
+    <h2 className="text-lg md:text-xl font-bold mb-2">
+      Second-hand Electronics Trading
+    </h2>
+    <p className="text-sm text-gray-300">
+      Buy and sell quality used electronic devices safely.
+    </p>
+  </div>
 
-        </div>
-
+</div>
       </div>
     </section>
   );

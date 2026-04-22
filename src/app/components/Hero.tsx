@@ -10,12 +10,11 @@ import image4 from "../../imports/image-6.png";
 import image5 from "../../imports/image-8.png";
 
 const dynamicTexts = [
-  "YOUR DIGITAL VALUE",
-  "YOUR DIGITAL ASSETS",
-  "YOUR DIGITAL WORLD",
-  "YOUR DIGITAL LIFE",
-  "YOUR DIGITAL INCOME",
-  "YOUR DIGITAL IMAGE"
+  "Your online reputation",
+  "Your online presence",
+  "Your digital brand",
+  "Your digital identity",
+  "Your digital value",
 ];
 
 // 🔥 TYPEWRITER FIXED
@@ -135,6 +134,13 @@ export function Hero() {
     </h2>
     <p className="text-sm text-gray-300">
       Modern, responsive and scalable web solutions.
+      <li>
+        <ul className="text-left mt-2 text-gray-400">
+          <li>Frontend Development: 200,000 - 300,000 RWF</li>
+          <li>Full Stack Development: 400,000 - 600,000 RWF</li>
+        </ul>
+      </li>
+      
     </p>
   </div>
 

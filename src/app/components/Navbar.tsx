@@ -22,11 +22,11 @@ export function Navbar() {
             <button onClick={() => scrollToSection('home')} className="text-[#B08D57] hover:text-white transition-colors">
             <img src={logoImg} alt="IntoreTech Logo" className="h-16 w-16 object-contain" />
              </button>
-            <span className="ml-3 font-bold text-2xl text-white"><img src={logoimg1} alt="IntoreTech Logo" className="h-16 w-16 object-contain" /></span>
+            <span className="ml-5 font-bold text-2xl text-white"><img src={logoimg1} alt="IntoreTech Logo" className="h-16 w-16 object-contain" /></span>
           </div>
 
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-8 flex items-baseline space-x-6">
               <button onClick={() => scrollToSection('home')} className="text-[#B08D57] hover:text-white transition-colors">
                 HOME
               </button>

@@ -6,77 +6,93 @@ import logoimg1 from "../../imports/logo1.png";
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { name: 'HOME', id: 'home' },
+    { name: 'SERVICES', id: 'services' },
+    { name: 'PRODUCTS', id: 'products' },
+    { name: 'ABOUT', id: 'about' },
+    { name: 'CONTACT', id: 'contact' },
+  ];
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Offset for fixed header height
+      const offset = 80; 
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
       setIsOpen(false);
     }
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#000] shadow-md z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-black shadow-lg z-[100]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
-            <button onClick={() => scrollToSection('home')} className="text-[#B08D57] hover:text-white transition-colors">
-            <img src={logoImg} alt="IntoreTech Logo" className="h-16 w-16 object-contain" />
-             </button>
-            <span className="ml-5 font-bold text-2xl text-white"><img src={logoimg1} alt="IntoreTech Logo" className="h-16 w-16 object-contain" /></span>
+          
+          {/* Logo Section */}
+          <div className="flex items-center flex-shrink-0">
+            <button 
+              onClick={() => scrollToSection('home')} 
+              className="flex items-center space-x-3 focus:outline-none"
+            >
+              <img src={logoImg} alt="Logo Icon" className="h-20 w-auto object-contain" />
+              <img src={logoimg1} alt="IntoreTech" className="h-9 w-auto object-contain" />
+            </button>
           </div>
 
-          <div className="hidden md:block">
-            <div className="ml-8 flex items-baseline space-x-6">
-              <button onClick={() => scrollToSection('home')} className="text-[#B08D57] hover:text-white transition-colors">
-                HOME
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-[#B08D57] hover:text-white font-medium text-sm tracking-wider transition-all duration-300"
+              >
+                {link.name}
               </button>
-              <button onClick={() => scrollToSection('services')} className="text-[#B08D57] hover:text-white transition-colors">
-                SERVICES
-              </button>
-              <button onClick={() => scrollToSection('products')} className="text-[#B08D57] hover:text-white transition-colors">
-                PRODUCTS
-              </button>
-              <button onClick={() => scrollToSection('about')} className="text-[#B08D57] hover:text-white transition-colors">
-                ABOUT
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="text-[#B08D57] hover:text-white transition-colors">
-                CONTACT
-              </button>
-            </div>
+            ))}
           </div>
 
-          <div className="md:hidden">
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-blue-700"
+              className="text-white p-2 focus:outline-none"
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden bg-[#0B243B] border-t border-blue-600">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <button onClick={() => scrollToSection('home')} className="block w-full text-left text-[#B08D57] px-3 py-2 hover:bg-blue-700 rounded-md">
-              Home
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`md:hidden bg-black/f95 backdrop-blur-md border-t border-[#B08D57]/20 transition-all duration-300 ease-in-out overflow-hidden ${
+          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-4 pt-2 pb-6 space-y-2">
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className="block w-full text-left text-[#B08D57] px-3 py-3 text-base font-semibold hover:bg-[#B08D57]/10 rounded-lg transition-colors"
+            >
+              {link.name}
             </button>
-            <button onClick={() => scrollToSection('services')} className="block w-full text-left text-[#B08D57] px-3 py-2 hover:bg-blue-700 rounded-md">
-              Services
-            </button>
-            <button onClick={() => scrollToSection('products')} className="block w-full text-left text-[#B08D57] px-3 py-2 hover:bg-blue-700 rounded-md">
-              Products
-            </button>
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left text-[#B08D57] px-3 py-2 hover:bg-blue-700 rounded-md">
-              About
-            </button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left text-[#B08D57] px-3 py-2 hover:bg-blue-700 rounded-md">
-              Contact
-            </button>
-          </div>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

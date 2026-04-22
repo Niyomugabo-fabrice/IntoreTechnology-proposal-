@@ -98,80 +98,74 @@ export function Hero() {
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/90"></div>
+                <div className="absolute inset-0 bg-black/80"></div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
 
-      {/* CONTENT */}
-      <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+     {/* CONTENT */}
+<div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
 
-        {/* TITLE */}
-        <h1 className="text-2xl sm:text-1.5xl md:text-2.5xl lg:text-3.5xl font-extrabold tracking-widest uppercase flex">
+  {/* TITLE */}
+  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center">
 
-          <span className="text-white shrink-0">
-            ELEVATE&nbsp;
-          </span>
+    <span className="text-white shrink-0">
+      ELEVATE&nbsp;
+    </span>
 
-          <span
-            style={{ color: '#B08D57' }}
-            className="inline-block w-[420px] text-left overflow-hidden whitespace-nowrap"
-          >
-            <TypewriterText texts={dynamicTexts} />
-          </span>
+    <span
+      style={{ color: '#B08D57' }}
+      className="inline-block min-w-[200px] sm:min-w-[260px] md:min-w-[320px] lg:min-w-[420px] text-left overflow-hidden whitespace-nowrap"
+    >
+      <TypewriterText texts={dynamicTexts} />
+    </span>
 
-        </h1>
+  </h1>
 
-        {/* ⭐ SERVICES CARDS */}
-<div className="mt-10 w-full max-w-6xl flex flex-col md:flex-row bg-white/5 backdrop-blur-md border border-white/20">
+  {/* ⭐ SERVICES CARDS */}
+  <div className="mt-8 w-full max-w-6xl flex flex-col md:flex-row bg-white/5 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden">
 
-  {/* Card 1 */}
-  <div className="flex-1 p-6 text-white flex flex-col items-center justify-center text-center">
-    <h2 className="text-lg md:text-xl font-bold mb-2">
-      Website Development
-    </h2>
-    <p className="text-sm text-gray-300">
-      Modern, responsive and scalable web solutions.
-      <li>
-        <ul className="text-left mt-2 text-gray-400">
-          <li>Frontend Development: 200,000 - 300,000 RWF</li>
-          <li>Full Stack Development: 400,000 - 600,000 RWF</li>
-        </ul>
-      </li>
-      
-    </p>
-  </div>
+    {/* Card 1 */}
+    <div className="flex-1 p-6 text-white text-center">
+      <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
+        Website Development
+      </h2>
+      <p className="text-xs sm:text-sm text-gray-300">
+        Modern, responsive and scalable web solutions.
+      </p>
+    </div>
 
-  {/* Divider */}
-  <div className="hidden md:block w-px bg-white/30"></div>
+    {/* Divider */}
+    <div className="hidden md:block w-px bg-white/20"></div>
 
-  {/* Card 2 */}
-  <div className="flex-1 p-6 text-white flex flex-col items-center justify-center text-center">
-    <h2 className="text-lg md:text-xl font-bold mb-2">
-      Mobile Application Development
-    </h2>
-    <p className="text-sm text-gray-300">
-      Android & iOS apps with smooth user experience.
-    </p>
-  </div>
+    {/* Card 2 */}
+    <div className="flex-1 p-6 text-white text-center">
+      <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
+        Mobile Application Development
+      </h2>
+      <p className="text-xs sm:text-sm text-gray-300">
+        Android & iOS apps with smooth user experience.
+      </p>
+    </div>
 
-  {/* Divider */}
-  <div className="hidden md:block w-px bg-white/30"></div>
+    {/* Divider */}
+    <div className="hidden md:block w-px bg-white/20"></div>
 
-  {/* Card 3 */}
-  <div className="flex-1 p-6 text-white flex flex-col items-center justify-center text-center">
-    <h2 className="text-lg md:text-xl font-bold mb-2">
-      Second-hand Electronics Trading
-    </h2>
-    <p className="text-sm text-gray-300">
-      Buy and sell quality used electronic devices safely.
-    </p>
+    {/* Card 3 */}
+    <div className="flex-1 p-6 text-white text-center">
+      <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
+        Second-hand Electronics Trading
+      </h2>
+      <p className="text-xs sm:text-sm text-gray-300">
+        Buy and sell quality used electronic devices safely.
+      </p>
+    </div>
+
   </div>
 
 </div>
-      </div>
     </section>
   );
 }

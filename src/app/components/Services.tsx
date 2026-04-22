@@ -1,6 +1,9 @@
 import { Globe, Smartphone, ShoppingCart } from "lucide-react";
+import { Mail, MessageCircle, Facebook } from 'lucide-react';
 
 export function Services() {
+   const whatsappMessage = encodeURIComponent('Hello IntoreTech');
+   const whatsappLink = `https://wa.me/250791905573?text=${whatsappMessage}`;
   const services = [
     {
       title: "Website Development",
@@ -23,9 +26,13 @@ export function Services() {
             <li>E-commerce</li>
             <li>Booking systems</li>
           </ul>
-
-          <p className="font-bold">Pricing:</p>
+            <p className="font-bold">Pricing:</p>
           <p>From 250,000 RWF</p>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white-400 hover:text-greenyellow transition-colors flex items-center px-20 py-20 ">
+                  <MessageCircle className="w-5 h-5 mr-2 bg-green-500" />
+                  Whatsapp
+            </a>
+        
         </div>
       ),
     },
@@ -57,6 +64,11 @@ export function Services() {
             <li>Secure </li>
             <li>Clean UI </li>
           </ul>
+           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white-400 hover:text-greenyellow transition-colors flex items-center px-20 py-20 ">
+                  <MessageCircle className="w-5 h-5 mr-2 bg-green-500" />
+                  Whatsapp
+            </a>
+          
         </div>
       ),
     },
@@ -85,6 +97,12 @@ export function Services() {
             <li>Affordable </li>
             <li>Tested </li>
             <li>Secure </li>
+            
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-white-400 hover:text-greenyellow transition-colors flex items-center px-20 py-20 ">
+                  <MessageCircle className="w-5 h-5 mr-2 bg-green-500" />
+                  Whatsapp
+            </a>
+          
           </ul>
         </div>
       ),

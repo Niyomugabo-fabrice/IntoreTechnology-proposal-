@@ -1,9 +1,9 @@
 export function About() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">About IntoreTech</h2>
-        <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
+    <section id="about" className="py-20 bg-gray-50 text-black">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-black/90">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white py-4">About IntoreTech</h2>
+        <div className="bg-[#B08D57] rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400">
           <div className="space-y-6 text-gray-700">
             <p className="text-lg leading-relaxed">
               IntoreTech has the aim of providing the best website and mobile application development

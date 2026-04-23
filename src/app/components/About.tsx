@@ -3,38 +3,31 @@ export function About() {
     <section id="about" className="py-20 bg-gray-50 text-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-black/90">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white py-4">About IntoreTech</h2>
-        <div className="bg-[#B08D57] rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400 ">
-          <div className="space-y-6 text-white-700">
-            <p className="text-lg leading-relaxed text-white-400">
+        <div className="bg-[#9AE630]/20 rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400 ">
+          <div className="space-y-6 text-[FFFFFF]/90">
+          <p className="text-2xl leading-relaxed p-6 rounded-lg text-[#FFFFFF]/90 font-bold">Our main Objective</p>
+            <p className="text-md leading-relaxed  bg-[#9AE630]/30 p-3 rounded-lg text-[#FFFFFF]/90 font-bold">
               IntoreTech has the aim of providing the best website and mobile application development
               services with quality systems. We also specialize in buying and selling second-hand
               electronic devices, making technology accessible to everyone.
             </p>
-
-            <div className="border-l-4 border-blue-600 pl-6 my-8">
-              <p className="text-2xl font-bold text-[#B08D57]-400 italic">
-                "Elevate your digital value"
-              </p>
-              <p className="text-sm text-white-500 mt-2">Our Motto</p>
-            </div>
-
             <div className="mt-8">
-              <h3 className="text-2xl font-bold mb-4">Our Services & Pricing</h3>
+              <h3 className="text-2xl font-bold mb-4 text-[#FFFFFF]/90">Our Services & Pricing</h3>
               <div className="space-y-4">
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h4 className="font-bold text-lg mb-2">Frontend Development</h4>
-                  <p className="text-gray-600 mb-2">
+                <div className="p-6 rounded-lg bg-[#9AE630]/30">
+                  <h4 className="text-[#FFFFFF]/90 text-lg mb-2 font-bold ">Frontend Development</h4>
+                  <p className="text-[#FFFFFF]/90 mb-2">
                     We develop responsive and modern frontend systems tailored to your needs.
                   </p>
-                  <p className="text-blue-600 font-bold text-xl">200,000 - 300,000 RWF</p>
+                  <p className="text-[#9AE630]/90 font-bold text-xl font-sans">200,000 - 300,000 RWF</p>
                 </div>
 
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h4 className="font-bold text-lg mb-2">Full Stack Development</h4>
-                  <p className="text-gray-600 mb-2">
+                <div className="bg-[#9AE630]/30 p-6 rounded-lg">
+                  <h4 className="text-[#FFFFFF]/90 text-lg mb-2 font-bold">Full Stack Development</h4>
+                  <p className="text-[#FFFFFF]/90 mb-2 font-sans">
                     Complete solutions with both frontend and backend systems for your business.
                   </p>
-                  <p className="text-purple-600 font-bold text-xl">400,000 - 600,000 RWF</p>
+                  <p className="text-[#9AE630]/90 font-bold text-xl font-sans">400,000 - 600,000 RWF</p>
                 </div>
               </div>
             </div>

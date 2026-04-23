@@ -73,12 +73,12 @@ export function Hero() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 2000,
+    speed: 0,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
-    fade: true,
+    autoplaySpeed: 5000,
+    fade: false,
     arrows: false,
   };
 
@@ -98,7 +98,7 @@ export function Hero() {
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/80"></div>
+                <div className="absolute inset-0 bg-black/85"></div>
               </div>
             </div>
           ))}
@@ -128,7 +128,7 @@ export function Hero() {
   <div className="mt-8 w-full max-w-5xl flex flex-col md:flex-row bg-white/5 border border-/20">
 
     {/* Card 1 */}
-    <div className="flex-1 p-6 text-white text-center">
+    <div className="flex-1 p-6 text-[#9AE630] text-center">
       <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
         Website Development
       </h2>
@@ -141,7 +141,7 @@ export function Hero() {
     <div className="hidden md:block w-px bg-white/100"></div>
 
     {/* Card 2 */}
-    <div className="flex-1 p-6 text-white text-center">
+    <div className="flex-1 p-6 text-[#9AE630] text-center">
       <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
         Mobile Application Development
       </h2>
@@ -154,7 +154,7 @@ export function Hero() {
     <div className="hidden md:block w-px bg-white/100"></div>
 
     {/* Card 3 */}
-    <div className="flex-1 p-6 text-white text-center">
+    <div className="flex-1 p-6 text-[#9AE630] text-center">
       <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
         Second-hand Electronics Trading
       </h2>

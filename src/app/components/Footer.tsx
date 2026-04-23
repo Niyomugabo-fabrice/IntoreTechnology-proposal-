@@ -36,7 +36,7 @@ export function Footer() {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('products')} className="text-gray-400 hover:text-white transition-colors">
+                <button onClick={() => scrollToSection('product')} className="text-gray-400 hover:text-white transition-colors">
                   Products
                 </button>
               </li>

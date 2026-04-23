@@ -3,19 +3,19 @@ export function About() {
     <section id="about" className="py-20 bg-gray-50 text-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-black/90">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white py-4">About IntoreTech</h2>
-        <div className="bg-[#B08D57] rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400">
-          <div className="space-y-6 text-gray-700">
-            <p className="text-lg leading-relaxed">
+        <div className="bg-[#B08D57] rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400 ">
+          <div className="space-y-6 text-white-700">
+            <p className="text-lg leading-relaxed text-white-400">
               IntoreTech has the aim of providing the best website and mobile application development
               services with quality systems. We also specialize in buying and selling second-hand
               electronic devices, making technology accessible to everyone.
             </p>
 
             <div className="border-l-4 border-blue-600 pl-6 my-8">
-              <p className="text-2xl font-bold text-gray-900 italic">
+              <p className="text-2xl font-bold text-[#B08D57]-400 italic">
                 "Elevate your digital value"
               </p>
-              <p className="text-sm text-gray-500 mt-2">Our Motto</p>
+              <p className="text-sm text-white-500 mt-2">Our Motto</p>
             </div>
 
             <div className="mt-8">

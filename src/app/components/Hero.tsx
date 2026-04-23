@@ -27,7 +27,7 @@ function TypewriterText({ texts }: { texts: string[] }) {
   const currentText = texts[textIndex];
 
   useEffect(() => {
-    const speed = isDeleting ? 30 : 60;
+    const speed = isDeleting ? 40: 60;
 
     const timeout = setTimeout(() => {
 
@@ -109,7 +109,7 @@ export function Hero() {
 <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
 
   {/* TITLE */}
-  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center">
+  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center py-15">
 
     <span className="text-white shrink-0">
       ELEVATE&nbsp;
@@ -125,7 +125,7 @@ export function Hero() {
   </h1>
 
   {/* ⭐ SERVICES CARDS */}
-  <div className="mt-8 w-full max-w-6xl flex flex-col md:flex-row bg-white/5 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden">
+  <div className="mt-8 w-full max-w-5xl flex flex-col md:flex-row bg-white/5 border border-/20">
 
     {/* Card 1 */}
     <div className="flex-1 p-6 text-white text-center">
@@ -138,7 +138,7 @@ export function Hero() {
     </div>
 
     {/* Divider */}
-    <div className="hidden md:block w-px bg-white/20"></div>
+    <div className="hidden md:block w-px bg-white/100"></div>
 
     {/* Card 2 */}
     <div className="flex-1 p-6 text-white text-center">
@@ -151,7 +151,7 @@ export function Hero() {
     </div>
 
     {/* Divider */}
-    <div className="hidden md:block w-px bg-white/20"></div>
+    <div className="hidden md:block w-px bg-white/100"></div>
 
     {/* Card 3 */}
     <div className="flex-1 p-6 text-white text-center">

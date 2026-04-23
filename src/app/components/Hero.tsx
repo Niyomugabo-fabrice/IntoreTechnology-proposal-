@@ -17,6 +17,7 @@ const dynamicTexts = [
   "Your digital value",
 ];
 
+
 // 🔥 TYPEWRITER FIXED
 function TypewriterText({ texts }: { texts: string[] }) {
   const [textIndex, setTextIndex] = useState(0);
@@ -125,12 +126,12 @@ export function Hero() {
   </h1>
 
   {/* ⭐ SERVICES CARDS */}
-  <div className="mt-8 w-full max-w-5xl flex flex-col md:flex-row bg-white/5 border border-/20">
+  <div className="mt-8 w-full max-w-5xl flex flex-col md:flex-row  border border-/20">
 
     {/* Card 1 */}
     <div className="flex-1 p-6 text-[#9AE630] text-center">
-      <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
-        Website Development
+      <h2 className="text-base sm:text-lg md:text-xl mb-2">
+        Website & Web Application Development
       </h2>
       <p className="text-xs sm:text-sm text-gray-300">
         Modern, responsive and scalable web solutions.
@@ -138,11 +139,11 @@ export function Hero() {
     </div>
 
     {/* Divider */}
-    <div className="hidden md:block w-px bg-white/100"></div>
+    <div className="hidden md:block w-px bg-[#FFFFFF]/50"></div>
 
     {/* Card 2 */}
     <div className="flex-1 p-6 text-[#9AE630] text-center">
-      <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
+      <h2 className="text-base sm:text-lg md:text-xl  mb-2">
         Mobile Application Development
       </h2>
       <p className="text-xs sm:text-sm text-gray-300">
@@ -151,11 +152,11 @@ export function Hero() {
     </div>
 
     {/* Divider */}
-    <div className="hidden md:block w-px bg-white/100"></div>
+    <div className="hidden md:block w-px bg-white/50"></div>
 
     {/* Card 3 */}
     <div className="flex-1 p-6 text-[#9AE630] text-center">
-      <h2 className="text-base sm:text-lg md:text-xl font-bold mb-2">
+      <h2 className="text-base sm:text-lg md:text-xl  mb-2 text-[#9AE630]">
         Second-hand Electronics Trading
       </h2>
       <p className="text-xs sm:text-sm text-gray-300">

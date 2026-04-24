@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 type Product = {
   name: string;
   price: string;
@@ -36,6 +37,8 @@ export function Products() {
     }
   ];
 
+  const phoneNumber = "250791905573";
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -44,32 +47,60 @@ export function Products() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {products.map((product, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl"
-            >
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-60 object-cover cursor-pointer"
-                onClick={() => setSelectedProduct(product)}
-              />
-              
+          {products.map((product, index) => {
+            const message = encodeURIComponent(
+              `Hello, I'm interested in ${product.name} (${product.price})`
+            );
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
 
-              <div className="p-4">
-                <span className="text-xs text-gray-500 uppercase">
-                  {product.category}
-                </span>
-                <h3 className="font-bold mt-1 mb-2">
-                  {product.name}
-                </h3>
-                <p className="text-blue-600 font-bold">
-                  {product.price}
-                </p>
+            return (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl"
+              >
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-60 object-cover cursor-pointer"
+                  onClick={() => setSelectedProduct(product)}
+                />
+
+                <div className="p-4">
+                  <span className="text-xs text-gray-500 uppercase">
+                    {product.category}
+                  </span>
+
+                  <h3 className="font-bold mt-1 mb-2">
+                    {product.name}
+                  </h3>
+
+                  <p className="text-blue-600 font-bold">
+                    {product.price}
+                  </p>
+
+                  {/* WhatsApp Button */}
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block mt-3 bg-green-500 text-white text-center py-2 rounded hover:bg-green-600"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+
+        {/* Next Products Button */}
+        <div className="text-center mt-10">
+          <button
+            onClick={() => alert("Load more products...")}
+            className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
+          >
+            Next Products →
+          </button>
         </div>
       </div>
 
@@ -96,9 +127,21 @@ export function Products() {
               {selectedProduct.price}
             </p>
 
+            {/* WhatsApp inside modal */}
+            <a
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                `Hello, I'm interested in ${selectedProduct.name}`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-4 bg-green-500 text-white text-center py-2 rounded"
+            >
+              Contact via WhatsApp
+            </a>
+
             <button
               onClick={() => setSelectedProduct(null)}
-              className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+              className="mt-4 bg-red-500 text-white px-4 py-2 rounded w-full"
             >
               Close
             </button>

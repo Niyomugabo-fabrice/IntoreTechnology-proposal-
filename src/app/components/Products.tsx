@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Product = {
   name: string;
@@ -40,6 +41,15 @@ export function Products() {
 
   const phoneNumber = "250791905573";
 
+  // 🔒 Prevent background scroll when modal is open
+  useEffect(() => {
+    if (selectedProduct) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [selectedProduct]);
+
   const openProduct = (index: number) => {
     setSelectedProduct(products[index]);
     setCurrentIndex(index);
@@ -47,8 +57,15 @@ export function Products() {
 
   const nextProduct = () => {
     const nextIndex = (currentIndex + 1) % products.length;
-    setSelectedProduct(products[nextIndex]);
     setCurrentIndex(nextIndex);
+    setSelectedProduct(products[nextIndex]);
+  };
+
+  const prevProduct = () => {
+    const prevIndex =
+      (currentIndex - 1 + products.length) % products.length;
+    setCurrentIndex(prevIndex);
+    setSelectedProduct(products[prevIndex]);
   };
 
   return (
@@ -58,7 +75,7 @@ export function Products() {
           Our Products
         </h2>
 
-        {/* PRODUCT LIST */}
+        {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {products.map((product, index) => (
             <div
@@ -76,11 +93,7 @@ export function Products() {
                 <span className="text-xs text-gray-500 uppercase">
                   {product.category}
                 </span>
-
-                <h3 className="font-bold mt-1 mb-2">
-                  {product.name}
-                </h3>
-
+                <h3 className="font-bold mt-1">{product.name}</h3>
                 <p className="text-blue-600 font-bold">
                   {product.price}
                 </p>
@@ -92,8 +105,28 @@ export function Products() {
 
       {/* MODAL */}
       {selectedProduct && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center">
-          <div className="bg-white p-6 rounded-lg max-w-md w-full">
+        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+          
+          {/* Left arrow */}
+          <button
+            onClick={prevProduct}
+            className="absolute left-5 text-[#ffffff]/60 p-2 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full hover:text-[#ffffff]/100"
+          >
+            <ChevronLeft size={40} />
+          </button>
+
+          {/* Right arrow */}
+          <button
+            onClick={nextProduct}
+            className="absolute right-5 text-[#ffffff]/60 p-2 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full hover:text-[#ffffff]/100"
+          >
+            <ChevronRight size={40} />
+          </button>
+
+          {/* CONTENT */}
+          <div className="bg-white p-6 rounded-lg max-w-md w-full relative z-10 mt-8">
 
             <img
               src={selectedProduct.image}
@@ -113,29 +146,21 @@ export function Products() {
               {selectedProduct.price}
             </p>
 
-            {/* WhatsApp ONLY inside modal */}
+            {/* WhatsApp */}
             <a
               href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                `Hello, I'm interested in ${selectedProduct.name} (${selectedProduct.price})`
+                `Hello, I'm interested in ${selectedProduct.name}`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-green-500 text-white text-center py-2 rounded mb-3"
+              className="block bg-green-500 text-white text-center py-2 rounded"
             >
               Buy on WhatsApp
             </a>
 
-            {/* Next Product Button */}
-            <button
-              onClick={nextProduct}
-              className="w-full bg-blue-600 text-white py-2 rounded mb-3"
-            >
-              Next Product →
-            </button>
-
             <button
               onClick={() => setSelectedProduct(null)}
-              className="w-full bg-red-500 text-white py-2 rounded"
+              className="mt-3 w-full bg-red-500 text-white py-2 rounded"
             >
               Close
             </button>

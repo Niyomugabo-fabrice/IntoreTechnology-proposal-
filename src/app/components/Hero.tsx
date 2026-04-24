@@ -65,7 +65,7 @@ function TypewriterText({ texts }: { texts: string[] }) {
   return (
     <span>
       {displayedText}
-      <span className="animate-pulse">|</span>
+      <span className="animate-pulse ">|</span>
     </span>
   );
 }
@@ -119,7 +119,7 @@ export function Hero() {
 
     <span
       style={{ color: '#B08D57' }}
-      className="inline-block min-w-[200px] sm:min-w-[260px] md:min-w-[320px] lg:min-w-[420px] text-left overflow-hidden whitespace-nowrap"
+      className="inline-block min-w-[200px] sm:min-w-[260px] md:min-w-[320px] lg:min-w-[420px] text-left overflow-hidden font-sans"
     >
       <TypewriterText texts={dynamicTexts} />
     </span>

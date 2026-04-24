@@ -126,12 +126,12 @@ export function Products() {
           </button>
 
           {/* CONTENT */}
-          <div className="bg-white p-6 rounded-lg max-w-md w-full relative z-10 mt-8">
+          <div className="bg-white/60 p-6 rounded-lg max-w-md w-full relative z-10 mt-8">
 
             <img
               src={selectedProduct.image}
               alt={selectedProduct.name}
-              className="w-full h-60 object-cover mb-4 rounded"
+              className="w-full h-60 object-cover mb-4 rounded-lg border border-[#B08D57] p-4 bg-white/100"
             />
 
             <h2 className="text-xl font-bold">

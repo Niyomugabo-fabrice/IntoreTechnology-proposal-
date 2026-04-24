@@ -70,8 +70,9 @@ export function Products() {
 
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
+      <div className="max-w-7xl mx-auto px-4 bg-gradient-to-br from-[#001D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57]  p-2">
+        <h2 className="text-3xl font-bold text-center mb-12 text-[#B08D57]">
           Our Products
         </h2>
 
@@ -126,7 +127,7 @@ export function Products() {
           </button>
 
           {/* CONTENT */}
-          <div className="bg-white/60 p-6 rounded-lg max-w-md w-full relative z-10 mt-8">
+          <div className="bg-white/80 p-6 rounded-lg max-w-md w-full relative z-10 mt-8">
 
             <img
               src={selectedProduct.image}
@@ -134,11 +135,11 @@ export function Products() {
               className="w-full h-60 object-cover mb-4 rounded-lg border border-[#B08D57] p-4 bg-white/100"
             />
 
-            <h2 className="text-xl font-bold">
+            <h2 className="text-xl text-[#0B0F07] mb-4 font-sans font-bold">
               {selectedProduct.name}
             </h2>
 
-            <p className="text-gray-500">
+            <p className="text-[#0B0F07] mb-4 font-sans font-bold">
               {selectedProduct.category}
             </p>
 
@@ -153,14 +154,16 @@ export function Products() {
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-green-500 text-white text-center py-2 rounded"
+              className="block bg-gradient-to-br from-[#09FF07] via-[#3bba12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] text-white/70 text-center py-2 rounded hover:text-white font-bold" 
             >
               Buy on WhatsApp
             </a>
 
             <button
               onClick={() => setSelectedProduct(null)}
-              className="mt-3 w-full bg-red-500 text-white py-2 rounded"
+              className="mt-3 w-full bg-gradient-to-br from-[#ff0909] via-[#fb2029] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] text-white/70 text-center py-2 rounded hover:text-white font-bold"
             >
               Close
             </button>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Services from './Services';
 
 import image1 from "../../imports/image.png";
 import image2 from "../../imports/image-1.png";
@@ -99,7 +100,7 @@ export function Hero() {
                   alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/85"></div>
+                <div className="absolute inset-0 bg-black/90"></div>
               </div>
             </div>
           ))}
@@ -129,37 +130,32 @@ export function Hero() {
   <div className="mt-8 w-full max-w-5xl flex flex-col md:flex-row  border border-/20">
 
     {/* Card 1 */}
-    <div className="flex-1 p-6 text-[#9AE630] text-center">
+    <div className="flex-1 p-6 text-[#FFFF] text-center  bg-[#B08D57]/20  rounded-lg p-4 m-2 border-[#B08D57]">
       <h2 className="text-base sm:text-lg md:text-xl mb-2">
         Website & Web Application Development
       </h2>
-      <p className="text-xs sm:text-sm text-gray-300">
+      <p className="text-xs sm:text-sm text-[#FFFFFF]/60 border border-[#B08D57]/20 rounded-lg p-4">
         Modern, responsive and scalable web solutions.
       </p>
     </div>
 
-    {/* Divider */}
-    <div className="hidden md:block w-px bg-[#FFFFFF]/50"></div>
-
     {/* Card 2 */}
-    <div className="flex-1 p-6 text-[#9AE630] text-center">
+    <div className="flex-1 p-6 text-[#FFFFFF] text-center bg-[#B08D57]/20  rounded-lg p-4 m-2 border-[#B08D57]">
       <h2 className="text-base sm:text-lg md:text-xl  mb-2">
         Mobile Application Development
       </h2>
-      <p className="text-xs sm:text-sm text-gray-300">
+      <p className="text-xs sm:text-sm text-[#FFFFFF]/60 border border-[#B08D57]/20 rounded-lg p-4 ">
         Android & iOS apps with smooth user experience.
       </p>
     </div>
 
-    {/* Divider */}
-    <div className="hidden md:block w-px bg-white/50"></div>
 
     {/* Card 3 */}
-    <div className="flex-1 p-6 text-[#9AE630] text-center">
-      <h2 className="text-base sm:text-lg md:text-xl  mb-2 text-[#9AE630]">
+    <div className="flex-1 p-6 text-[#FFFFFF] text-center Border bg-[#B08D57]/20  rounded-lg p-4 m-2">
+      <h2 className="text-base sm:text-lg md:text-xl  mb-2 text-[##B08D57]]">
         Second-hand Electronics Trading
       </h2>
-      <p className="text-xs sm:text-sm text-gray-300">
+      <p className="text-xs sm:text-sm text-[#FFFFFF]/60 border border-[#B08D57]/20 rounded-lg p-4">
         Buy and sell quality used electronic devices safely.
       </p>
     </div>

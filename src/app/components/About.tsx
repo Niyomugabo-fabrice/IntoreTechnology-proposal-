@@ -1,20 +1,23 @@
 export function About() {
   return (
-    <section id="about" className=" bg-gray-50 text-black">
-      <div className= "bg-[#000000]/90 bg-cover bg-center py-16 px-16">
-        <div className="bg-[#9AE630]/20 rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400 ">
+    <section id="about" className="text-[#B08D57] ">
+      <div className= " bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-lg p-8 md:p-12">
+        <div className="rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400 ">
          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white py-4">About IntoreTech</h2>
           <div className="space-y-6 text-[FFFFFF]/90">
-            <p className="text-md leading-relaxed  bg-[#9AE630]/30  pb-10 rounded-lg text-[#FFFFFF]/90 font-bold">
+            <p className="text-md leading-relaxed  bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57]   pb-10 rounded-lg text-[#FFFFFF]/90 font-bold">
             <p className="text-2xl leading-relaxed rounded-lg text-[#FFFFFF]/90 font-bold">Our main Objective</p>
               IntoreTech has the aim of providing the best website and mobile application development
               services with quality systems. We also specialize in buying and selling second-hand
               electronic devices, making technology accessible to everyone.
             </p>
-            <div className="mt-8 bg-bg-[#9AE630]/30 p-6 rounded-lg">
+            <div className="mt-8 bg-bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57]  p-6 rounded-lg">
               <h3 className="text-2xl font-bold mb-4 text-[#FFFFFF]/90 bg-[#000]/100 p-4 rounded-lg">Our Services & Pricing</h3>
               <div className="space-y-4">
-                <div className="p-6 rounded-lg bg-[#9AE630]/30">
+                <div className="rounded-lg bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2">
                   <h4 className="text-[#FFFFFF]/90 text-lg mb-2 font-bold p--12">Frontend Development</h4>
                   <p className="text-[#FFFFFF]/90 mb-2">
                     We develop responsive and modern frontend systems tailored to your needs.
@@ -22,7 +25,8 @@ export function About() {
                   <p className="text-[#9AE630]/90 font-bold text-xl font-sans">200,000 - 300,000 RWF</p>
                 </div>
 
-                <div className="bg-[#9AE630]/30 p-6 rounded-lg">
+                <div className="bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2 p-6 rounded-lg">
                   <h4 className="text-[#FFFFFF]/90 text-lg mb-2 font-bold p--12">Full Stack Development</h4>
                   <p className="text-[#FFFFFF]/90 mb-2 font-sans">
                     Complete solutions with both frontend and backend systems for your business.

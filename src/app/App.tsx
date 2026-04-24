@@ -10,8 +10,8 @@ export default function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <Services />
       <Products />
+      <Services />
       <About />
       <Footer />
     </div>

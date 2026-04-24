@@ -23,7 +23,8 @@ export function Services() {
   const services = [
     {
       title: "Website Development",
-      icon: <Globe className="w-10 h-10" />,
+      icon: <Globe className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>,
       description: (
         <div className="text-sm space-y-2 text-left ">
           <p>We build modern, fast, and responsive websites, We build both frontend and backend</p>
@@ -31,14 +32,14 @@ export function Services() {
           <p className="font-bold" >Technologies:</p>
            <div className="overflow-hidden whitespace-nowrap">
               <div className="inline-flex animate-scroll gap-5 over">
-                <img src={reactimage} className="w-20 h-20" />
-                <img src={htmlimage} className="w-20 h-20" />
-                <img src={cssimage} className="w-20 h-20" />
-                <img src={nodejsimage} className="w-20 h-20" />
-                <img src={djangoimage} className="w-20 h-20" />
-                <img src={javascriptimage} className="w-20 h-20" />
-                <img src={mysqlimage} className="w-20 h-20" />
-                <img src={mangodbimage} className="w-20 h-20" />
+                <img src={reactimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+                <img src={htmlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+                <img src={cssimage} className="w-20 h-15 border border-[#B08D57] rounded-full" />
+                <img src={nodejsimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+                <img src={djangoimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+                <img src={javascriptimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+                <img src={mysqlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+                <img src={mangodbimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
               </div>
             </div>
           <p className="font-bold">Web Types:</p>
@@ -67,7 +68,8 @@ export function Services() {
 
     {
       title: "Mobile Application Development",
-      icon: <Smartphone className="w-10 h-10" />,
+      icon: <Smartphone className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>,
       description: (
         <div className="text-sm space-y-2 text-left">
           <p>We build Android & iOS mobile applications.</p>
@@ -108,7 +110,8 @@ export function Services() {
 
     {
       title: "Second Hand Devices",
-      icon: <ShoppingCart className="w-10 h-10" />,
+      icon: <ShoppingCart className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2" />,
       description: (
         <div className="text-sm space-y-2 text-left">
           <p>Buy and sell second-hand smartphones and laptops.</p>
@@ -147,8 +150,8 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-16 bg-black/90 text-white">
-      <div className="max-w-7xl mx-auto px-2 py-8 sm:px-6 lg:px-8 bg-[#9AE630]/20 border border-white/20 rounded-xl">
+    <section id="services" className="py-16 bg-black/90 text-[#B08D57]">
+      <div className="max-w-7xl mx-auto px-2 py-8 sm:px-6 lg:px-8 bg-[#000000]/20 border border-[#B08D57] rounded-xl">
 
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
@@ -158,12 +161,12 @@ export function Services() {
         {/* CONTENT */}
         {activeIndex === null ? (
           // SHOW ALL SERVICES (SUMMARY)
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 bg-[#9AE630">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
             {services.map((service, index) => (
               <div
                 key={index}
                 onClick={() => setActiveIndex(index)}
-                className="cursor-pointer bg-[#9AE630]/30 text-white rounded-4xl shadow-md p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                className="cursor-pointer bg-[#B08D57]/15 text-white rounded-4xl shadow-md p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="flex flex-col items-center gap-3">
                   {service.icon}
@@ -175,22 +178,20 @@ export function Services() {
           </div>
         ) : (
           // SHOW SELECTED SERVICE
-          <div className="bg-[#FEB933'] text-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto bg-black/10 border border-white/50">
+          <div className="text-[#B08D57] rounded-2xl shadow-lg p-8 max-w-2xl mx-auto bg-[#B08D57]/10 border border-white/50">
             <div className="flex items-center gap-4 mb-4">
               {services[activeIndex].icon}
               <h3 className="text-2xl font-bold">
                 {services[activeIndex].title}
               </h3>
             </div>
-
-          {services[activeIndex].description}
-           <button
+            <button
               onClick={() => setActiveIndex(null)}
-              className="mb-4 text-sm  hover:text-white bg-white/20 px-4 py-2 rounded-lg mt-6 transition-colors"
+              className="mb-4 text-sm  hover:text-white bg-white/30 px-4 py-2 rounded-lg mt-6 transition-colors font-bold text-white/80"
             >
-              ← Back to services
+              Back to services
             </button>
-
+          {services[activeIndex].description}
           </div>
         )}
       </div>

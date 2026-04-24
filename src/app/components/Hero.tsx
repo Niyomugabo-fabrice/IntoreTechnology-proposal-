@@ -11,11 +11,11 @@ import image4 from "../../imports/image-6.png";
 import image5 from "../../imports/image-8.png";
 
 const dynamicTexts = [
-  "Your online reputation",
-  "Your online presence",
-  "Your digital brand",
-  "Your digital identity",
-  "Your digital value",
+  "reputation",
+  "presence",
+  "brand",
+  "identity",
+  "value",
 ];
 
 
@@ -111,10 +111,10 @@ export function Hero() {
 <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
 
   {/* TITLE */}
-  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center py-15">
+  <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center py-15">
 
-    <span className="text-white shrink-0">
-      ELEVATE&nbsp;
+    <span className="text-white shrink-0 font-sans">
+      Elevate your&nbsp;
     </span>
 
     <span

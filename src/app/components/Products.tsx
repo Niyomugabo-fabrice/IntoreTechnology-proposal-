@@ -9,8 +9,9 @@ type Product = {
 
 export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const products = [
+  const products: Product[] = [
     {
       name: 'MacBook Pro 2019',
       price: '450,000 RWF',
@@ -39,6 +40,17 @@ export function Products() {
 
   const phoneNumber = "250791905573";
 
+  const openProduct = (index: number) => {
+    setSelectedProduct(products[index]);
+    setCurrentIndex(index);
+  };
+
+  const nextProduct = () => {
+    const nextIndex = (currentIndex + 1) % products.length;
+    setSelectedProduct(products[nextIndex]);
+    setCurrentIndex(nextIndex);
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -46,73 +58,47 @@ export function Products() {
           Our Products
         </h2>
 
+        {/* PRODUCT LIST */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {products.map((product, index) => {
-            const message = encodeURIComponent(
-              `Hello, I'm interested in ${product.name} (${product.price})`
-            );
-            const whatsappLink = `https://wa.me/${phoneNumber}?text=${message}`;
+          {products.map((product, index) => (
+            <div
+              key={index}
+              onClick={() => openProduct(index)}
+              className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl cursor-pointer"
+            >
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-60 object-cover"
+              />
 
-            return (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl"
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-60 object-cover cursor-pointer"
-                  onClick={() => setSelectedProduct(product)}
-                />
+              <div className="p-4">
+                <span className="text-xs text-gray-500 uppercase">
+                  {product.category}
+                </span>
 
-                <div className="p-4">
-                  <span className="text-xs text-gray-500 uppercase">
-                    {product.category}
-                  </span>
+                <h3 className="font-bold mt-1 mb-2">
+                  {product.name}
+                </h3>
 
-                  <h3 className="font-bold mt-1 mb-2">
-                    {product.name}
-                  </h3>
-
-                  <p className="text-blue-600 font-bold">
-                    {product.price}
-                  </p>
-
-                  {/* WhatsApp Button */}
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mt-3 bg-green-500 text-white text-center py-2 rounded hover:bg-green-600"
-                  >
-                    Chat on WhatsApp
-                  </a>
-                </div>
+                <p className="text-blue-600 font-bold">
+                  {product.price}
+                </p>
               </div>
-            );
-          })}
-        </div>
-
-        {/* Next Products Button */}
-        <div className="text-center mt-10">
-          <button
-            onClick={() => alert("Load more products...")}
-            className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
-          >
-            Next Products →
-          </button>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Modal */}
+      {/* MODAL */}
       {selectedProduct && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center">
           <div className="bg-white p-6 rounded-lg max-w-md w-full">
 
             <img
               src={selectedProduct.image}
               alt={selectedProduct.name}
-              className="w-full h-60 object-cover mb-4"
+              className="w-full h-60 object-cover mb-4 rounded"
             />
 
             <h2 className="text-xl font-bold">
@@ -123,25 +109,33 @@ export function Products() {
               {selectedProduct.category}
             </p>
 
-            <p className="text-blue-600 font-bold">
+            <p className="text-blue-600 font-bold mb-4">
               {selectedProduct.price}
             </p>
 
-            {/* WhatsApp inside modal */}
+            {/* WhatsApp ONLY inside modal */}
             <a
               href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                `Hello, I'm interested in ${selectedProduct.name}`
+                `Hello, I'm interested in ${selectedProduct.name} (${selectedProduct.price})`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="block mt-4 bg-green-500 text-white text-center py-2 rounded"
+              className="block bg-green-500 text-white text-center py-2 rounded mb-3"
             >
-              Contact via WhatsApp
+              Buy on WhatsApp
             </a>
+
+            {/* Next Product Button */}
+            <button
+              onClick={nextProduct}
+              className="w-full bg-blue-600 text-white py-2 rounded mb-3"
+            >
+              Next Product →
+            </button>
 
             <button
               onClick={() => setSelectedProduct(null)}
-              className="mt-4 bg-red-500 text-white px-4 py-2 rounded w-full"
+              className="w-full bg-red-500 text-white py-2 rounded"
             >
               Close
             </button>

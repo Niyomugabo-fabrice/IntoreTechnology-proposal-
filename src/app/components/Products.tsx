@@ -95,7 +95,7 @@ export function Products() {
                   {product.category}
                 </span>
                 <h3 className="font-bold mt-1">{product.name}</h3>
-                <p className="text-blue-600 font-bold">
+                <p className="text-[#B08D57] font-bold">
                   {product.price}
                 </p>
               </div>
@@ -139,11 +139,11 @@ export function Products() {
               {selectedProduct.name}
             </h2>
 
-            <p className="text-[#0B0F07] mb-4 font-sans font-bold">
+            <p className="text-[#B08D57] mb-4 font-sans font-bold">
               {selectedProduct.category}
             </p>
 
-            <p className="text-blue-600 font-bold mb-4">
+            <p className="text-[#55AA00] font-bold mb-4">
               {selectedProduct.price}
             </p>
 

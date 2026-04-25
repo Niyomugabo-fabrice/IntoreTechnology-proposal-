@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Services from './Services';
+import { Globe, Smartphone, ShoppingCart, MessageCircle } from "lucide-react";
 
 import image1 from "../../imports/image.png";
 import image2 from "../../imports/image-1.png";
@@ -131,6 +132,8 @@ export function Hero() {
 
     {/* Card 1 */}
     <div className="flex-1 p-6 text-[#FFFF] text-center  bg-[#B08D57]/20  rounded-lg p-4 m-2 border-[#B08D57]">
+    <Globe className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
       <h2 className="text-base sm:text-lg md:text-xl mb-2">
         Website & Web Application Development
       </h2>
@@ -141,6 +144,8 @@ export function Hero() {
 
     {/* Card 2 */}
     <div className="flex-1 p-6 text-[#FFFFFF] text-center bg-[#B08D57]/20  rounded-lg p-4 m-2 border-[#B08D57]">
+      <Smartphone className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
       <h2 className="text-base sm:text-lg md:text-xl  mb-2">
         Mobile Application Development
       </h2>
@@ -152,6 +157,8 @@ export function Hero() {
 
     {/* Card 3 */}
     <div className="flex-1 p-6 text-[#FFFFFF] text-center Border bg-[#B08D57]/20  rounded-lg p-4 m-2">
+      <ShoppingCart className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
       <h2 className="text-base sm:text-lg md:text-xl  mb-2 text-[##B08D57]]">
         Second-hand Electronics Trading
       </h2>

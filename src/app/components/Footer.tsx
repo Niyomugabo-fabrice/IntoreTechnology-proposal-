@@ -12,10 +12,10 @@ export function Footer() {
   };
 
   return ( 
-   <footer className="text-white py-0 bg-[url('../../src/imports/footer.png')]">
-    <div className="bg-black/90">
+   <footer className="text-white bg-[url('../../src/imports/footer.png')]">
+    <div className="bg-black/90 py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-5">
           <div>
             <h3 className="text-xl font-bold mb-4">IntoreTech</h3>
             <p className="text-gray-400 mb-4">Elevate your digital value</p>

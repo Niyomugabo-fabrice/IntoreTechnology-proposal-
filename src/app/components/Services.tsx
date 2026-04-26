@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Globe, Smartphone, ShoppingCart, MessageCircle } from "lucide-react";
+
 import djangoimage from "../../imports/django.png";
 import javascriptimage from "../../imports/javascript.png";
 import mysqlimage from "../../imports/sql.png";
@@ -12,36 +13,52 @@ import cssimage from "../../imports/css.png";
 import htmlimage from "../../imports/html.png";
 import mangodbimage from "../../imports/mangodb.png";
 
-
-
-export function Services() {
+export function Services({ activeService }) {
   const [activeIndex, setActiveIndex] = useState(null);
+  const cardRefs = useRef([]);
 
   const whatsappMessage = encodeURIComponent("Hello IntoreTech");
   const whatsappLink = `https://wa.me/250791905573?text=${whatsappMessage}`;
 
+  // 🔥 Auto activate when clicking top cards
+  useEffect(() => {
+    if (activeService !== null) {
+      setActiveIndex(activeService);
+
+      setTimeout(() => {
+        cardRefs.current[activeService]?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 100);
+    }
+  }, [activeService]);
+
   const services = [
     {
       title: "Website Development",
-      icon: <Globe className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
-                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>,
+      icon: (
+        <Globe className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+        shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
+      ),
       description: (
-        <div className="text-sm space-y-2 text-left ">
-          <p>We build modern, fast, and responsive websites, We build both frontend and backend</p>
+        <div className="text-sm space-y-2 text-left">
+          <p>We build modern, fast, and responsive websites, both frontend and backend.</p>
 
-          <p className="font-bold" >Technologies:</p>
-           <div className="overflow-hidden whitespace-nowrap">
-              <div className="inline-flex animate-scroll gap-5 over">
-                <img src={reactimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-                <img src={htmlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-                <img src={cssimage} className="w-20 h-15 border border-[#B08D57] rounded-full" />
-                <img src={nodejsimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-                <img src={djangoimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-                <img src={javascriptimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-                <img src={mysqlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-                <img src={mangodbimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-              </div>
+          <p className="font-bold">Technologies:</p>
+          <div className="overflow-hidden whitespace-nowrap">
+            <div className="inline-flex animate-scroll gap-5">
+              <img src={reactimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+              <img src={htmlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+              <img src={cssimage} className="w-20 h-15 border border-[#B08D57] rounded-full" />
+              <img src={nodejsimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+              <img src={djangoimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+              <img src={javascriptimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+              <img src={mysqlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
+              <img src={mangodbimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
             </div>
+          </div>
+
           <p className="font-bold">Web Types:</p>
           <ul className="list-disc list-inside">
             <li>Business</li>
@@ -53,12 +70,7 @@ export function Services() {
           <p className="font-bold">Pricing:</p>
           <p>From 250,000 RWF</p>
 
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 mt-3 text-green-400 hover:text-green-500"
-          >
+          <a href={whatsappLink} className="flex items-center gap-2 mt-3 text-green-400 font-bold">
             <MessageCircle className="w-5 h-5" />
             Contact on WhatsApp
           </a>
@@ -68,8 +80,10 @@ export function Services() {
 
     {
       title: "Mobile Application Development",
-      icon: <Smartphone className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
-                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>,
+      icon: (
+        <Smartphone className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+        shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
+      ),
       description: (
         <div className="text-sm space-y-2 text-left">
           <p>We build Android & iOS mobile applications.</p>
@@ -95,12 +109,7 @@ export function Services() {
             <li>Clean UI</li>
           </ul>
 
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 mt-3 text-green-400 hover:text-green-500"
-          >
+          <a href={whatsappLink} className="flex items-center gap-2 mt-3 text-green-400 font-bold">
             <MessageCircle className="w-5 h-5" />
             Contact on WhatsApp
           </a>
@@ -110,8 +119,10 @@ export function Services() {
 
     {
       title: "Second Hand Devices",
-      icon: <ShoppingCart className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
-                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2" />,
+      icon: (
+        <ShoppingCart className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+        shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
+      ),
       description: (
         <div className="text-sm space-y-2 text-left">
           <p>Buy and sell second-hand smartphones and laptops.</p>
@@ -135,12 +146,7 @@ export function Services() {
             <li>Secure</li>
           </ul>
 
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 mt-3 text-green-400 hover:text-green-500"
-          >
+          <a href={whatsappLink} className="flex items-center gap-2 mt-3 text-green-400 font-bold">
             <MessageCircle className="w-5 h-5" />
             Contact on WhatsApp
           </a>
@@ -149,51 +155,54 @@ export function Services() {
     },
   ];
 
+  const handleClick = (i) => {
+    setActiveIndex(activeIndex === i ? null : i);
+  };
+
   return (
     <section id="services" className="py-16 bg-black/90 text-[#B08D57]">
       <div className="max-w-7xl mx-auto px-2 py-8 sm:px-6 lg:px-8 bg-[#000000]/20 border border-[#B08D57] rounded-xl">
 
-        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">
           Services
         </h2>
 
-        {/* CONTENT */}
-        {activeIndex === null ? (
-          // SHOW ALL SERVICES (SUMMARY)
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
-            {services.map((service, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {services.map((service, index) => {
+            const isActive = activeIndex === index;
+            const isDim = activeIndex !== null && activeIndex !== index;
+
+            return (
               <div
                 key={index}
-                onClick={() => setActiveIndex(index)}
-                className="cursor-pointer bg-[#B08D57]/15 text-white rounded-4xl shadow-md p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+                ref={(el) => (cardRefs.current[index] = el)}
+                onClick={() => handleClick(index)}
+                className={`relative cursor-pointer bg-[#B08D57]/15 text-white rounded-4xl shadow-md p-6 text-center 
+                transition-all duration-300 overflow-hidden
+                ${isActive ? "scale-110 z-20" : ""}
+                ${isDim ? "opacity-60" : "opacity-100"}`}
               >
-                <div className="flex flex-col items-center gap-3">
+
+                {isDim && (
+                  <div className="absolute inset-0 bg-black/80 rounded-4xl z-10"></div>
+                )}
+
+                <div className="relative z-20 flex flex-col items-center gap-3">
                   {service.icon}
-                  <h3 className="text-lg font-bold">{service.title}</h3>
-                  <p className="text-sm opacity-80">Click to view details</p>
+                  <h3 className="text-lg">{service.title}</h3>
+                  <p className="text-sm opacity-80">Click to focus</p>
                 </div>
+
+                <div className="relative z-20 mt-4 text-left">
+                  {service.description}
+                </div>
+
               </div>
-            ))}
-          </div>
-        ) : (
-          // SHOW SELECTED SERVICE
-          <div className="text-[#B08D57] rounded-2xl shadow-lg p-8 max-w-2xl mx-auto bg-[#B08D57]/10 border border-white/50">
-            <div className="flex items-center gap-4 mb-4">
-              {services[activeIndex].icon}
-              <h3 className="text-2xl font-bold">
-                {services[activeIndex].title}
-              </h3>
-            </div>
-            <button
-              onClick={() => setActiveIndex(null)}
-              className="mb-4 text-sm  hover:text-white bg-white/30 px-4 py-2 rounded-lg mt-6 transition-colors font-bold text-white/80"
-            >
-              Back to services
-            </button>
-          {services[activeIndex].description}
-          </div>
-        )}
+            );
+          })}
+
+        </div>
       </div>
     </section>
   );

@@ -33,30 +33,47 @@ export function Services({ activeService }) {
       }, 100);
     }
   }, [activeService]);
+  const [techIndex, setTechIndex] = useState(0);
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setTechIndex((prev) => (prev + 1) % 8);
+  }, 4000); // speed
+
+  return () => clearInterval(interval);
+}, []);
 
   const services = [
     {
       title: "Website Development",
       icon: (
-        <Globe className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
-        shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
+        <Globe className="w-20 h-20 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+        shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-4"/>
       ),
       description: (
         <div className="text-sm space-y-2 text-left">
           <p>We build modern, fast, and responsive websites, both frontend and backend.</p>
 
           <p className="font-bold">Technologies:</p>
-          <div className="overflow-hidden whitespace-nowrap">
-            <div className="inline-flex animate-scroll gap-5">
-              <img src={reactimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-              <img src={htmlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-              <img src={cssimage} className="w-20 h-15 border border-[#B08D57] rounded-full" />
-              <img src={nodejsimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-              <img src={djangoimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-              <img src={javascriptimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-              <img src={mysqlimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-              <img src={mangodbimage} className="w-15 h-15 border border-[#B08D57] rounded-full" />
-            </div>
+        <div className="overflow-hidden whitespace-nowrap">
+          <div className="flex justify-center items-center h-20">
+  {[
+    reactimage,
+    htmlimage,
+    cssimage,
+    nodejsimage,
+    djangoimage,
+    javascriptimage,
+    mysqlimage,
+    mangodbimage,
+  ].map((img, i) => (
+    <img
+      key={i}
+      src={img}
+      className={`w-16 h-16 border border-[#B08D57] rounded-full absolute transition-all duration-500
+      ${techIndex === i ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
+    />
+  ))}
+</div>
           </div>
 
           <p className="font-bold">Web Types:</p>

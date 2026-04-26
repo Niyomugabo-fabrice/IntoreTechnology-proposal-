@@ -3,7 +3,7 @@ import { Mail, Phone, MessageCircle, Facebook } from "lucide-react";
 export function Contacts() {
   const whatsappMessage = encodeURIComponent("Hello IntoreTech");
   const whatsappLink = `https://wa.me/250791905573?text=${whatsappMessage}`;
-  const emailLink = "mailto:intoretech@gmail.com";
+  const emailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=intoretech@gmail.com";
   const facebookLink = "https://www.facebook.com/IntoreTech";
 
   const contactItems = [
@@ -14,7 +14,7 @@ export function Contacts() {
       color: "bg-green-500",
     },
     {
-      name: "Email",
+      name: "intoretech@gmail.com",
       icon: Mail,
       link: emailLink,
       color: "bg-blue-500",

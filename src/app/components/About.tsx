@@ -3,8 +3,8 @@ export function About() {
     <section id="about" className="text-[#B08D57]">
       <div className= " bg-gradient-to-br from-[#001D57] via-[#3b2a12] to-black shadow-[0_0_15px_rgba(176,141,87,0.4)]   border-[#B08D57] rounded-lg p-8 md:p-12">
         <div className="border border-[#B08D57] rounded-lg p-6 bg-[#000000]/20">
-         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white py-4">About IntoreTech</h2>
-          <div className="space-y-6 text-[FFFFFF]/90">
+         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#B08D57] py-4">About IntoreTech</h2>
+          <div className="space-y-6 text-[#FFFFFF]/90">
             <p className="text-md leading-relaxed  bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
                   shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57]   pb-10 rounded-lg text-[#FFFFFF]/90 font-bold px-4">
             <p className="text-2xl leading-relaxed rounded-lg text-[#FFFFFF]/90 font-bold py-4">Our main Objective</p>

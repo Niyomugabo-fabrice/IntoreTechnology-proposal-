@@ -46,8 +46,8 @@ export function Services({ activeService }) {
     {
       title: "Website Development",
       icon: (
-        <Globe className="w-20 h-20 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
-        shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-4"/>
+        <Globe className="w-15 h-15 bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+        shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2"/>
       ),
       description: (
         <div className="text-sm space-y-2 text-left">
@@ -69,7 +69,7 @@ export function Services({ activeService }) {
     <img
       key={i}
       src={img}
-      className={`w-16 h-16 border border-[#B08D57] rounded-full absolute transition-all duration-500
+      className={`w-20 h-20 border border-[#B08D57] rounded-full absolute transition-all duration-500 p-2
       ${techIndex === i ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
     />
   ))}

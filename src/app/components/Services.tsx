@@ -160,7 +160,8 @@ export function Services({ activeService }) {
   };
 
   return (
-    <section id="services" className="py-16 bg-black/90 text-[#B08D57]">
+    <section id="services" className="py-16 bg-gradient-to-br from-[#001D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] text-[#B08D57]">
       <div className="max-w-7xl mx-auto px-2 py-8 sm:px-6 lg:px-8 bg-[#000000]/20 border border-[#B08D57] rounded-xl">
 
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">

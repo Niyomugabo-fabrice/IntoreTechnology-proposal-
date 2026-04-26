@@ -12,6 +12,8 @@ import firebaseimage from "../../imports/firebase.png";
 import cssimage from "../../imports/css.png";
 import htmlimage from "../../imports/html.png";
 import mangodbimage from "../../imports/mangodb.png";
+import iphone16 from "../../imports/iphone16.jpg";
+import laptop from "../../imports/laptop.jpg";
 
 export function Services({ activeService }) {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -146,8 +148,8 @@ export function Services({ activeService }) {
 
           <p className="font-bold">Categories:</p>
           <ul className="list-disc list-inside">
-            <li>Smartphones</li>
-            <li>Laptops</li>
+            <img src={iphone16} alt="Smartphone" className="w-16 h-16 mx-auto" />
+            <img src={laptop} alt="Laptop" className="w-16 h-16 mx-auto" />
           </ul>
 
           <p className="font-bold">Services:</p>

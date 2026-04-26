@@ -55,7 +55,7 @@ export function Hero() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5; // 🔥 slow motion
+      videoRef.current.playbackRate = 0.7; // 🔥 slow motion
     }
   }, []);
 
@@ -89,17 +89,17 @@ export function Hero() {
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/60"></div>
 
       </div>
 
       {/* CONTENT */}
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
 
-        <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center py-15">
+        <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-3xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center py-15">
 
           <span className="text-white font-sans">
             Elevate your&nbsp;

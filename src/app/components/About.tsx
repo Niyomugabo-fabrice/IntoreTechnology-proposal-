@@ -1,8 +1,8 @@
 export function About() {
   return (
     <section id="about" className="text-[#B08D57] ">
-      <div className= " bg-black border border-[#B08D57] rounded-lg p-8 md:p-12">
-        <div className="rounded-lg shadow-lg p-8 md:p-12 text-center text-white-400 ">
+      <div className= " bg-[#ffffff] border border-[#B08D57] rounded-lg p-8 md:p-12">
+        <div className="rounded-lg shadow-lg p-8 md:p-12 text-center text-[#B08D57] bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black">
          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white py-4">About IntoreTech</h2>
           <div className="space-y-6 text-[FFFFFF]/90">
             <p className="text-md leading-relaxed  bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 

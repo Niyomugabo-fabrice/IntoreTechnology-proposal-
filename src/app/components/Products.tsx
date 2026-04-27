@@ -41,7 +41,7 @@ export function Products() {
       name: 'MacBook Pro 2023',
       price: '1,340,000 RWF',
       category: 'Laptop',
-      image: "image/lenovo.jpg"
+      image: "image/Lenovo.jpg"
     }
   ];
 

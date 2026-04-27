@@ -43,8 +43,8 @@ export function Navbar() {
               onClick={() => scrollToSection('home')} 
               className="flex items-center space-x-3 focus:outline-none"
             >
-              <img src={"images/logo.png"} alt="Logo Icon" className="h-20 w-auto object-contain" />
-              <img src={"images/logo1.png"} alt="IntoreTech" className="h-9 w-auto object-contain" />
+              <img src={"image/Logo.png"} alt="Logo Icon" className="h-20 w-auto object-contain" />
+              <img src={"image/logo1.png"} alt="IntoreTech" className="h-9 w-auto object-contain" />
             </button>
           </div>
 

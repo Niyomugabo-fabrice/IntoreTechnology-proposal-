@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import iphone from "../../imports/iphone16.jpg";
+import macbook from "../../imports/macbook.jpg";
+import lenovo from "../../imports/Lenovo.jpg";
+import samsung from "../../imports/samsung.jpg";
+import macbookpro from "../../imports/mac.jpg";
+
 
 type Product = {
   name: string;
@@ -17,25 +23,31 @@ export function Products() {
       name: 'MacBook Pro 2019',
       price: '450,000 RWF',
       category: 'Laptop',
-      image: 'https://images.unsplash.com/photo-1636083513967-800c0ba9371b?auto=format&fit=crop&w=1080&q=80'
+      image: macbook
     },
     {
       name: 'Dell XPS 13',
       price: '380,000 RWF',
       category: 'Laptop',
-      image: 'https://images.unsplash.com/photo-1635896383799-06e1e0accda0?auto=format&fit=crop&w=1080&q=80'
+      image: lenovo
     },
     {
       name: 'iPhone 12 Pro',
       price: '480,000 RWF',
       category: 'Smartphone',
-      image: 'https://images.unsplash.com/photo-1662221356784-14b60d842253?auto=format&fit=crop&w=1080&q=80'
+      image: iphone
     },
     {
       name: 'Samsung Galaxy S21',
       price: '420,000 RWF',
       category: 'Smartphone',
-      image: 'https://images.unsplash.com/photo-1648737963059-59ec8e2d50c5?auto=format&fit=crop&w=1080&q=80'
+      image: samsung
+    },
+     {
+      name: 'MacBook Pro 2023',
+      price: '1,340,000 RWF',
+      category: 'Laptop',
+      image: macbookpro
     }
   ];
 
@@ -87,7 +99,7 @@ export function Products() {
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-60 object-cover"
+                className="w-full h-70 object-cover"
               />
 
               <div className="p-4">
@@ -106,7 +118,7 @@ export function Products() {
 
       {/* MODAL */}
       {selectedProduct && (
-        <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50">
+        <div className=" fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-1">
           
           {/* Left arrow */}
           <button
@@ -127,12 +139,12 @@ export function Products() {
           </button>
 
           {/* CONTENT */}
-          <div className="bg-white/80 p-6 rounded-lg max-w-md w-full relative z-10 mt-8">
+          <div className="bg-white/80 p-6 rounded-lg w-100 h-150 mt-20 relative z-10 m">
 
             <img
               src={selectedProduct.image}
-              alt={selectedProduct.name}
-              className="w-full h-60 object-cover mb-4 rounded-lg border border-[#B08D57] p-4 bg-white/100"
+              alt={selectedProduct.name }
+              className="w-full h-70 object-cover mb-4 rounded-lg border border-[#B08D57] px-15 bg-white/100"
             />
 
             <h2 className="text-xl text-[#0B0F07] mb-4 font-sans font-bold">

@@ -14,6 +14,14 @@ import htmlimage from "../../imports/html.png";
 import mangodbimage from "../../imports/mangodb.png";
 import iphone16 from "../../imports/iphone16.jpg";
 import laptop from "../../imports/laptop.jpg";
+import lenovo from "../../imports/lenovo.jpg";
+import macbook from "../../imports/macbook.jpg";
+import samsung from "../../imports/samsung.jpg";
+import macibook from "../../imports/mac.jpg";
+import acer from "../../imports/acer.jpg";
+import pixel from "../../imports/pixel.jpg";
+
+
 
 export function Services({ activeService }) {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -32,14 +40,14 @@ export function Services({ activeService }) {
           behavior: "smooth",
           block: "center",
         });
-      }, 100);
+      }, 10);
     }
   }, [activeService]);
   const [techIndex, setTechIndex] = useState(0);
   useEffect(() => {
   const interval = setInterval(() => {
     setTechIndex((prev) => (prev + 1) % 8);
-  }, 4000); // speed
+  }, 3000); // speed
 
   return () => clearInterval(interval);
 }, []);
@@ -109,9 +117,28 @@ export function Services({ activeService }) {
 
           <p className="font-bold">Technologies:</p>
           <ul className="list-disc list-inside">
-            <li>Flutter</li>
-            <li>React Native</li>
-            <li>Firebase</li>
+            <div className="overflow-hidden whitespace-nowrap">
+          <div className="flex justify-center items-center h-20">
+  {[
+    flutterimage,
+    reactnativeimage,
+    firebaseimage,
+     flutterimage,
+    reactnativeimage,
+    firebaseimage,
+     flutterimage,
+    reactnativeimage,
+    firebaseimage,
+  ].map((img, i) => (
+    <img
+      key={i}
+      src={img}
+      className={`w-20 h-20 border border-[#B08D57] rounded-full absolute transition-all duration-500 p-2
+      ${techIndex === i ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
+    />
+  ))}
+</div>
+          </div>
           </ul>
 
           <p className="font-bold">Apps:</p>
@@ -147,10 +174,28 @@ export function Services({ activeService }) {
           <p>Buy and sell second-hand smartphones and laptops.</p>
 
           <p className="font-bold">Categories:</p>
-          <ul className="list-disc list-inside">
-            <img src={iphone16} alt="Smartphone" className="w-16 h-16 mx-auto" />
-            <img src={laptop} alt="Laptop" className="w-16 h-16 mx-auto" />
-          </ul>
+          <div className="overflow-hidden whitespace-nowrap">
+          <div className="flex justify-center items-center h-20">
+  {[
+    iphone16,
+    laptop,
+    lenovo,
+    macbook,
+    samsung,
+    macibook,
+    acer,
+    pixel,
+  ].map((img, i) => (
+    <img
+      key={i}
+      src={img}
+      className={`w- h-20 border border-[#B08D57] rounded-full absolute transition-all duration-500 p-2
+      ${techIndex === i ? "opacity-100 scale-100" : "opacity-0 scale-75"}`}
+    />
+  ))}
+</div>
+       </div>
+
 
           <p className="font-bold">Services:</p>
           <ul className="list-disc list-inside">

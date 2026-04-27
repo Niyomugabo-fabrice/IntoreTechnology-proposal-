@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logoImg from "../../imports/logo.png";
-import logoimg1 from "../../imports/logo1.png";
+
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,8 +43,8 @@ export function Navbar() {
               onClick={() => scrollToSection('home')} 
               className="flex items-center space-x-3 focus:outline-none"
             >
-              <img src={logoImg} alt="Logo Icon" className="h-20 w-auto object-contain" />
-              <img src={logoimg1} alt="IntoreTech" className="h-9 w-auto object-contain" />
+              <img src={"images/logo.png"} alt="Logo Icon" className="h-20 w-auto object-contain" />
+              <img src={"images/logo1.png"} alt="IntoreTech" className="h-9 w-auto object-contain" />
             </button>
           </div>
 

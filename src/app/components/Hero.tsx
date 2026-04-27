@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Globe, Smartphone, ShoppingCart } from "lucide-react";
-import bgVideo from "../../imports/bg.mp4";
+// import bgVideo from "@/src/imports/bg.mp4";
 
 const dynamicTexts = ["reputation", "presence", "brand", "identity", "value"];
 
@@ -80,7 +80,7 @@ export function Hero() {
 
         <video
           ref={videoRef}
-          src={bgVideo}
+          src="video/bg.mp4"
           autoPlay
           loop
           muted

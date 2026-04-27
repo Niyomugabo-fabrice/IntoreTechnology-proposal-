@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import iphone from "../../imports/iphone16.jpg";
-import macbook from "../../imports/macbook.jpg";
-import lenovo from "../../imports/Lenovo.jpg";
-import samsung from "../../imports/samsung.jpg";
-import macbookpro from "../../imports/mac.jpg";
-
 
 type Product = {
   name: string;
@@ -23,31 +17,31 @@ export function Products() {
       name: 'MacBook Pro 2019',
       price: '450,000 RWF',
       category: 'Laptop',
-      image: macbook
+      image: "image/mac.jpg"
     },
     {
       name: 'Dell XPS 13',
       price: '380,000 RWF',
       category: 'Laptop',
-      image: lenovo
+      image: "image/laptop.jpg"
     },
     {
       name: 'iPhone 12 Pro',
       price: '480,000 RWF',
       category: 'Smartphone',
-      image: iphone
+      image: "image/iphone16.jpg"
     },
     {
       name: 'Samsung Galaxy S21',
       price: '420,000 RWF',
       category: 'Smartphone',
-      image: samsung
+      image: "image/samsung.jpg"
     },
      {
       name: 'MacBook Pro 2023',
       price: '1,340,000 RWF',
       category: 'Laptop',
-      image: macbookpro
+      image: "image/lenovo.jpg"
     }
   ];
 

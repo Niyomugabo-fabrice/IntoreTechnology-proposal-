@@ -1,31 +1,13 @@
 import { useState, useRef, useEffect } from "react";
 import { Globe, Smartphone, ShoppingCart, MessageCircle } from "lucide-react";
 
-import djangoimage from "../../imports/django.png";
-import javascriptimage from "../../imports/javascript.png";
-import mysqlimage from "../../imports/sql.png";
-import nodejsimage from "../../imports/nodejs.png";
-import reactimage from "../../imports/react.png";
-import flutterimage from "../../imports/flutter.png";
-import reactnativeimage from "../../imports/reactnative.png";
-import firebaseimage from "../../imports/firebase.png";
-import cssimage from "../../imports/css.png";
-import htmlimage from "../../imports/html.png";
-import mangodbimage from "../../imports/mangodb.png";
-import iphone16 from "../../imports/iphone16.jpg";
-import laptop from "../../imports/laptop.jpg";
-import lenovo from "../../imports/lenovo.jpg";
-import macbook from "../../imports/macbook.jpg";
-import samsung from "../../imports/samsung.jpg";
-import macibook from "../../imports/mac.jpg";
-import acer from "../../imports/acer.jpg";
-import pixel from "../../imports/pixel.jpg";
+type Props = {
+  activeService: number | null;
+};
 
-
-
-export function Services({ activeService }) {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const cardRefs = useRef([]);
+export function Services({ activeService }: Props) {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+ const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const whatsappMessage = encodeURIComponent("Hello IntoreTech");
   const whatsappLink = `https://wa.me/250791905573?text=${whatsappMessage}`;
@@ -67,14 +49,14 @@ export function Services({ activeService }) {
         <div className="overflow-hidden whitespace-nowrap">
           <div className="flex justify-center items-center h-20">
   {[
-    reactimage,
-    htmlimage,
-    cssimage,
-    nodejsimage,
-    djangoimage,
-    javascriptimage,
-    mysqlimage,
-    mangodbimage,
+    "image/django.png",
+    "image/nodejs.png",
+    "image/css.png",
+    "image/react.png",
+    "image/django.png",
+    "image/javascript.png",
+    "image/sql.png",
+    "image/mangodb.png",
   ].map((img, i) => (
     <img
       key={i}
@@ -120,15 +102,15 @@ export function Services({ activeService }) {
             <div className="overflow-hidden whitespace-nowrap">
           <div className="flex justify-center items-center h-20">
   {[
-    flutterimage,
-    reactnativeimage,
-    firebaseimage,
-     flutterimage,
-    reactnativeimage,
-    firebaseimage,
-     flutterimage,
-    reactnativeimage,
-    firebaseimage,
+    "image/flutter.png",
+    "image/reactnative.png",
+    "image/firebase.png",
+     "image/flutter.png",
+    "image/reactnative.png",
+    "image/firebase.png",
+     "image/flutter.png",
+    "image/reactnative.png",
+    "image/firebase.png",
   ].map((img, i) => (
     <img
       key={i}
@@ -177,14 +159,14 @@ export function Services({ activeService }) {
           <div className="overflow-hidden whitespace-nowrap">
           <div className="flex justify-center items-center h-20">
   {[
-    iphone16,
-    laptop,
-    lenovo,
-    macbook,
-    samsung,
-    macibook,
-    acer,
-    pixel,
+    "image/iphone16.jpg",
+    "image/laptop.jpg",
+    "image/Lenovo.jpg",
+    "image/macbook.jpg",
+    "image/samsung.jpg",
+    "image/macbook.jpg",
+    "image/acer.jpg",
+    "image/pixel.jpg",
   ].map((img, i) => (
     <img
       key={i}
@@ -219,7 +201,7 @@ export function Services({ activeService }) {
     },
   ];
 
-  const handleClick = (i) => {
+ const handleClick = (i: number) => {
     setActiveIndex(activeIndex === i ? null : i);
   };
 
@@ -241,7 +223,9 @@ export function Services({ activeService }) {
             return (
               <div
                 key={index}
-                ref={(el) => (cardRefs.current[index] = el)}
+               ref={(el) => {
+  cardRefs.current[index] = el;
+}}
                 onClick={() => handleClick(index)}
                 className={`relative cursor-pointer bg-[#B08D57]/15 text-white rounded-4xl shadow-md p-6 text-center 
                 transition-all duration-300 overflow-hidden

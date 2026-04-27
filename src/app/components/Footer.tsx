@@ -31,13 +31,13 @@ export function Footer() {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors">
-                  Services
+                <button onClick={() => scrollToSection('products')} className="text-gray-400 hover:text-white transition-colors">
+                  Products
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection('products')} className="text-gray-400 hover:text-white transition-colors">
-                  Products
+                <button onClick={() => scrollToSection('services')} className="text-gray-400 hover:text-white transition-colors">
+                  Services
                 </button>
               </li>
               <li>

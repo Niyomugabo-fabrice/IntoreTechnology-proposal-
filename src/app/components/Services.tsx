@@ -256,7 +256,6 @@ export function Services({ activeService }) {
                 <div className="relative z-20 flex flex-col items-center gap-3">
                   {service.icon}
                   <h3 className="text-lg">{service.title}</h3>
-                  <p className="text-sm opacity-80">Click to focus</p>
                 </div>
 
                 <div className="relative z-20 mt-4 text-left">

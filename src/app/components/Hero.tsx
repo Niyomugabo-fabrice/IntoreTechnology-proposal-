@@ -73,7 +73,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen">
+    <section id="home" className="relative h-screen mb-20" >
 
       {/* 🔥 VIDEO BACKGROUND */}
       <div className="absolute inset-0 z-0 overflow-hidden">

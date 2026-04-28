@@ -75,7 +75,7 @@ export function Products() {
   };
 
   return (
-   <section id="products" className="py-20 bg-white">
+   <section id="products" className="py-20 bg-white mt-40">
       <div className="max-w-7xl mx-auto px-4 bg-gradient-to-br from-[#001D57] via-[#3b2a12] to-black 
                   shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57]  p-2">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#B08D57]">
@@ -133,7 +133,7 @@ export function Products() {
           </button>
 
           {/* CONTENT */}
-          <div className="bg-white/80 p-6 rounded-lg w-100 h-150 mt-20 relative z-10 m">
+          <div className="bg-white/80 p-6 rounded-lg w-100 h-150 mt-20 relative z-10 ">
 
             <img
               src={selectedProduct.image}

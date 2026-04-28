@@ -75,7 +75,7 @@ export function Products() {
   };
 
   return (
-   <section id="products" className="py-20 bg-white mt-40">
+   <section id="products" className="py-20 bg-white mt-100">
       <div className="max-w-7xl mx-auto px-4 bg-gradient-to-br from-[#001D57] via-[#3b2a12] to-black 
                   shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57]  p-2">
         <h2 className="text-3xl font-bold text-center mb-12 text-[#B08D57]">

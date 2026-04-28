@@ -73,10 +73,10 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative h-screen bg-black" >
+    <section className="relative min-h-screen bg-black">
 
       {/* 🔥 VIDEO BACKGROUND */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden">  
 
         <video
           ref={videoRef}

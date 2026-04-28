@@ -89,7 +89,7 @@ export function Hero() {
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
 
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-transparent to-black/60"></div>

@@ -38,17 +38,18 @@ export function Products() {
       image: "image/samsung.jpg"
     },
      {
-      name: 'Samsung Galaxy S21',
-      price: '440,000 RWF',
+      name: 'Pixel 5',
+      price: '300,000 RWF',
       category: 'smartphone',
-      image: "image/samsung.jpg"
+      image: "image/pixel5.png"
     },
     {
       name: 'Pixel',
       price: '1,340,000 RWF',
       category: 'smartphone',
       image: "image/pixel.jpg"
-    }
+    },
+
   ];
 
   const phoneNumber = "250791905573";

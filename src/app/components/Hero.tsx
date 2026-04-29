@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Globe, Smartphone, ShoppingCart } from "lucide-react";
 // import bgVideo from "@/src/imports/bg.mp4";
 
-const dynamicTexts = ["elevate your reputation", "elevate your presence", "elevate your brand", "elevate your identity", "elevate your value"];
+const dynamicTexts = ["reputation", "presence", "brand", "identity", "value"];
 
 /* TYPEWRITER */
 function TypewriterText({ texts }: { texts: string[] }) {
@@ -99,10 +99,10 @@ export function Hero() {
       {/* CONTENT */}
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
 
-        <h1 className="text-xl mt-15 sm:text-3xl  md:text-4xl lg:text-3xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center py-15">
+        <h1 className="text-xl mt-10 sm:text-3xl  md:text-4xl lg:text-3xl font-extrabold tracking-widest uppercase flex flex-wrap justify-center py-15">
 
           <span className="text-white font-sans">
-          &nbsp;
+            Elevate your&nbsp;
           </span>
 
           <span style={{ color: '#B08D57' }} className="min-w-[200px] text-left font-sans">

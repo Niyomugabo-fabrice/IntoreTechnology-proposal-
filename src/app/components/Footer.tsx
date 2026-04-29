@@ -1,5 +1,6 @@
 import { Mail, MessageCircle, Facebook } from 'lucide-react';
 
+
 export function Footer() {
   const whatsappMessage = encodeURIComponent('Hello IntoreTech');
   const whatsappLink = `https://wa.me/250791905573?text=${whatsappMessage}`;
@@ -12,7 +13,7 @@ export function Footer() {
   };
 
   return ( 
-   <footer className="text-white bg-[url('image/footer.png')]">
+  <footer className="text-white bg-[url('/image/footer.png')]">
     <div className="bg-black/90 py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-5">

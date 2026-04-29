@@ -38,10 +38,16 @@ export function Products() {
       image: "image/samsung.jpg"
     },
      {
-      name: 'MacBook Pro 2023',
+      name: 'Samsung Galaxy S21',
+      price: '440,000 RWF',
+      category: 'smartphone',
+      image: "image/samsung.jpg"
+    },
+    {
+      name: 'Pixel',
       price: '1,340,000 RWF',
-      category: 'Laptop',
-      image: "image/Lenovo.jpg"
+      category: 'smartphone',
+      image: "image/pixel.jpg"
     }
   ];
 

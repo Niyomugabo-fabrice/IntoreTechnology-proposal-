@@ -33,7 +33,7 @@ export function About() {
                 </div>
                   <div className="bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
                   shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2 p-6 rounded-lg">
-                  <h4 className="text-[#FFFFFF]/70 text-lg mb-2 font-bold p--12">Second-Hand Devices</h4>
+                  <h4 className="text-[#FFFFFF]/70 text-lg mb-2 font-bold p--12">Second-Hand Devices Trading</h4>
                   <p className="text-[#FFFFFF]/70 mb-2 font-sans">
                     Buying and Selling second-hand electronic devices
                   </p>

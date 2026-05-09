@@ -22,7 +22,6 @@ export function About() {
                   <p className="text-[#FFFFFF]/70 mb-2">
                     We develop responsive and modern frontend systems tailored to your needs.
                   </p>
-                  <p className="text-[#ffffff]/100 font-bold text-xl font-sans">200,000 - 300,000 RWF</p>
                 </div>
 
                 <div className="bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
@@ -31,7 +30,6 @@ export function About() {
                   <p className="text-[#FFFFFF]/70 mb-2 font-sans">
                     Complete solutions with both frontend and backend systems for your business.
                   </p>
-                  <p className="text-[#ffffff]/100 font-bold text-xl font-sans">400,000 - 600,000 RWF</p>
                 </div>
               </div>
             </div>

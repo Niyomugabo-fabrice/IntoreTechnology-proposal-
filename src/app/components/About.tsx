@@ -53,7 +53,7 @@ export function About() {
             <div className="grid grid-cols-2 gap-4 sm:gap-5">
 
               <div className="bg-black/30 border border-[#B08D57] rounded-2xl p-4 sm:p-6 text-center hover:bg-[#B08D57]/10 transition duration-300">
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-[#B08D57]">
+                <h2 className="text-2xl sm:text-2.5xl font-extrabold text-[#B08D57] font-sans">
                   24/7
                 </h2>
                 <p className="text-white/70 mt-2 text-xs sm:text-sm">
@@ -62,7 +62,7 @@ export function About() {
               </div>
 
               <div className="bg-black/30 border border-[#B08D57] rounded-2xl p-4 sm:p-6 text-center hover:bg-[#B08D57]/10 transition duration-300">
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-[#B08D57]">
+                <h2 className="text-2xl sm:text-2.5xl font-extrabold text-[#B08D57] font-sans">
                   Fast
                 </h2>
                 <p className="text-white/70 mt-2 text-xs sm:text-sm">
@@ -71,7 +71,7 @@ export function About() {
               </div>
 
               <div className="bg-black/30 border border-[#B08D57] rounded-2xl p-4 sm:p-6 text-center hover:bg-[#B08D57]/10 transition duration-300">
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-[#B08D57]">
+                <h2 className="text-2xl sm:text-2.5xl font-extrabold text-[#B08D57] font-sans">
                   Secure
                 </h2>
                 <p className="text-white/70 mt-2 text-xs sm:text-sm">
@@ -80,7 +80,7 @@ export function About() {
               </div>
 
               <div className="bg-black/30 border border-[#B08D57] rounded-2xl p-4 sm:p-6 text-center hover:bg-[#B08D57]/10 transition duration-300">
-                <h2 className="text-2xl sm:text-4xl font-extrabold text-[#B08D57]">
+                <h2 className="text-2xl sm:text-2.5xl font-extrabold text-[#B08D57] font-sans">
                   Premium
                 </h2>
                 <p className="text-white/70 mt-2 text-xs sm:text-sm">

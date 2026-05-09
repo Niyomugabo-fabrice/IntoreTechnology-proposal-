@@ -12,7 +12,7 @@ export function About() {
           {/* TITLE */}
           <div className="text-center mb-12">
 
-            <h2 className="text-3xl sm:text-3xl lg:text-5xl font-extrabold text-[#B08D57] tracking-wide">
+            <h2 className="text-3xl sm:text-2.8xl lg:text-5xl font-extrabold text-[#B08D57] tracking-wide">
               About IntoreTech
             </h2>
 

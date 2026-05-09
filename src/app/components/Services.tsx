@@ -75,7 +75,6 @@ export function Services({ activeService }: Props) {
             <li>E-commerce</li>
             <li>Booking systems</li>
           </ul>
-
           
 
           <a href={whatsappLink} className="flex items-center gap-2 mt-3 text-green-400 font-bold">

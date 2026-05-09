@@ -12,7 +12,7 @@ export function About() {
           {/* TITLE */}
           <div className="text-center mb-12">
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#B08D57] tracking-wide">
+            <h2 className="text-3xl sm:text-3xl lg:text-5xl font-extrabold text-[#B08D57] tracking-wide">
               About IntoreTech
             </h2>
 
@@ -31,7 +31,7 @@ export function About() {
             {/* LEFT */}
             <div className="bg-gradient-to-br from-[#B08D57]/20 via-[#3b2a12]/40 to-black border border-[#B08D57] rounded-3xl p-5 sm:p-7 hover:scale-[1.01] transition duration-300 shadow-[0_0_20px_rgba(176,141,87,0.2)]">
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-5">
+              <h3 className="text-2xl sm:text-2.5xl font-bold text-white mb-5">
                 Our Main Objective
               </h3>
 

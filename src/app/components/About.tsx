@@ -10,7 +10,7 @@ export function About() {
             <p className="text-2xl leading-relaxed rounded-lg text-[#FFFFFF]/90 font-bold py-4">Our main Objective</p>
               IntoreTech has the aim of providing the best website and mobile application development
               services with quality systems. We also specialize in buying and selling second-hand
-              electronic devices, making technology accessible to everyone.
+              electronic devices(the devics alread used before), making technology accessible to everyone.
             </p>
             <div className="mt-8 bg-bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
                   shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57]  p-6 rounded-lg">
@@ -29,6 +29,13 @@ export function About() {
                   <h4 className="text-[#FFFFFF]/70 text-lg mb-2 font-bold p--12">Full Stack Development</h4>
                   <p className="text-[#FFFFFF]/70 mb-2 font-sans">
                     Complete solutions with both frontend and backend systems for your business.
+                  </p>
+                </div>
+                  <div className="bg-gradient-to-br from-[#B08D57] via-[#3b2a12] to-black 
+                  shadow-[0_0_15px_rgba(176,141,87,0.4)] border border-[#B08D57] rounded-full p-2 p-6 rounded-lg">
+                  <h4 className="text-[#FFFFFF]/70 text-lg mb-2 font-bold p--12">Full Stack Development</h4>
+                  <p className="text-[#FFFFFF]/70 mb-2 font-sans">
+                    Buying and Selling second-hand electronic devices
                   </p>
                 </div>
               </div>

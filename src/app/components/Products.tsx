@@ -220,7 +220,7 @@ export function Products() {
             className="
             bg-white/90
             backdrop-blur-xl
-            p-5 sm:p-6
+            px-5 sm:p-6
             rounded-3xl
             w-full
             max-w-md
@@ -236,18 +236,18 @@ export function Products() {
               src={selectedProduct.image}
               alt={selectedProduct.name}
               className="
-              w-full
-              h-72
+              w-100
+              h-70
               object-cover
-              mb-5
               rounded-2xl
               border border-[#B08D57]/40
               bg-white
+              mt-15
               "
             />
 
             {/* PRODUCT INFO */}
-            <h2 className="text-2xl text-[#0B0F07] mb-3 font-bold">
+            <h2 className="text-1xl text-[#0B0F07] mb-3 font-bold">
               {selectedProduct.name}
             </h2>
 
@@ -263,7 +263,7 @@ export function Products() {
               {selectedProduct.category}
             </p>
 
-            <p className="text-[#55AA00] text-2xl font-extrabold mb-5">
+            <p className="text-[#55AA00] text-1xl font-extrabold mb-5">
               {selectedProduct.price}
             </p>
 
@@ -281,9 +281,9 @@ export function Products() {
               border border-[#B08D57]
               text-white/80
               text-center
-              py-3
               rounded-xl
               hover:text-white
+              h-7
               font-bold
               transition-all duration-300
               hover:scale-[1.02]
@@ -296,18 +296,18 @@ export function Products() {
             <button
               onClick={() => setSelectedProduct(null)}
               className="
-              mt-4
+              mt-2
               w-full
               bg-gradient-to-br from-[#ff0909] via-[#fb2029] to-black
               shadow-[0_0_15px_rgba(176,141,87,0.4)]
               border border-[#B08D57]
               text-white/80
               text-center
-              py-3
               rounded-xl
               hover:text-white
               font-bold
               transition-all duration-300
+              h-7
               hover:scale-[1.02]
               "
             >

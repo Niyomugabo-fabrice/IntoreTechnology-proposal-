@@ -26,7 +26,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+      className="inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div

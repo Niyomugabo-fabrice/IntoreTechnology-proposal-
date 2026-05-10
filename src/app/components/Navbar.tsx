@@ -68,7 +68,7 @@ export function Navbar() {
               className="text-white p-2 focus:outline-none"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={27} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
